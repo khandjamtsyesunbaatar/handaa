@@ -1,0 +1,47 @@
+<%- include('./layout/header.ejs'); %>
+      <!-- section --> 
+      <section id="blog-single-post">
+         <div class="container">
+              <div class="row">
+    
+                   <div class="col-md-offset-1 col-md-10 col-sm-12">
+                        <div class="blog-single-post-thumb">
+                             
+    
+                             <div class="blog-post-title">
+                                  <h2><%= blog.title %></a></h2>
+                             </div>
+    
+                             <div class="blog-post-format">
+                            
+                                  <span><i class="fa fa-date"></i><%= blog.date %></span>
+                             </div>
+    
+                             <div class="blog-post-des">
+                                  <p></p>
+                                  <blockquote><%= blog.desTitle %> </blockquote>
+                            
+                                  <p><%= blog.description %></p>
+                                  <div class="blog-post-image">
+                                  <img src="../photos/<%= blog.blogPhoto %>" class="img-responsive" alt="Blog Image 3">
+                             </div>
+                                  
+                             </div>
+                           
+                             
+                             
+    
+                            <br><br>
+                            
+                        </div>
+              </div>
+         </div>
+    </section>
+      <!-- end section -->
+
+<!-- section -->
+    
+      <!-- end section -->
+      
+      <!-- footer -->
+      <%- include('./layout/footer.ejs'); %>

@@ -1,0 +1,37 @@
+<%- include('../admin-layout/header.ejs'); %>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+  <h2>Create Blog</h2>
+
+  <form method="POST" action="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <input type="text" name="blogTitle" class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Desciption Title</label>
+      <input type="text" name="blogDesciption" class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <textarea name="desc" rows="5" class="form-control" placeholder="Description" required="required"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Category</label>
+      <select id="cars" name="category" class="form-control">
+        <option value="volvo">Гэр бүл</option>
+        <option value="saab">аялал</option>
+        <option value="opel">баяр</option>
+        <option value="audi">Ажил</option>
+      </select>
+    </div>
+    
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Photo</label>
+      <input type="file" name="postPhoto" class="form-control" id="exampleInputPassword1">
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+      
+      </main>
+        <%- include('../admin-layout/footer.ejs'); %>

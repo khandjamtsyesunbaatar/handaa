@@ -1,0 +1,27 @@
+<%- include('../admin-layout/header.ejs'); %>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+  <h2>Create User</h2>
+
+  <form method="POST" action="register" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" name="username" class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" name="email" class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Photo</label>
+      <input type="file" name="profilePhoto" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+      
+      </main>
+        <%- include('../admin-layout/footer.ejs'); %>

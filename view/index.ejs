@@ -1,0 +1,45 @@
+<%- include('./layout/header.ejs'); %>
+    <!-- .Header -->
+
+    <!-- Main Site -->
+        <main id="site-main">
+
+            <!-- Blog Post Section -->
+                <section id="posts">
+                    <div class="container">
+                        <div class="grid">
+                            <!-- article -->
+                            <% for(var i = users.length-1; i >= 0; i--) { %>
+                                <div class="grid-item">
+                                    <article class="article">
+                                        <div class="card">
+                                            <div class="overflow-img">
+                                                <a href="/single-post/<%= users[i].id %>">
+                                                    <img src="../photos/<%= users[i].blogPhoto %>" class="img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="card-body text-center px-1">
+                                                <a href="#" class="text-title display-1 text-dark">
+                                                    <%= users[i].title %>
+                                                </a>
+                                                <p class="text-title "><%= users[i].desTitle %></p>
+                                                <p class="secondary-title text-secondary display-3">
+                                                    <span><i class="far fa-clock text-primary"></i><%= users[i].date %>1</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <% } %>
+                        </div>
+                        
+
+                  
+                    </div>
+                </section>
+   
+       </main>
+    <!-- .Main Site -->
+
+    <!-- footer -->
+    <%- include('./layout/footer.ejs'); %>

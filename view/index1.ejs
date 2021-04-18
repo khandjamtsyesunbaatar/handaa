@@ -1,0 +1,22 @@
+<%- include('./layout/header.ejs'); %>
+      <div class="section layout_padding">
+         <div class="container">
+            <% for(var i = users.length-1; i >= 0; i--) { %>
+            <div class="row margin_top_30">
+               <div class="col-md-6"><a href="/single-post/<%= users[i].id %>">
+                  <img src="../photos/<%= users[i].blogPhoto %>"/>
+                  </a>
+               </div>
+               <div class="col-md-6">
+                  <div class="full blog_cont">
+                     <h4><%= users[i].title %></h4>
+                     <h5><%= users[i].date %></h5>
+                     <p><%= users[i].desTitle %></p>
+                  </div>
+               </div>
+            </div>
+            <% } %>
+
+         </div>
+      </div>
+      <%- include('./layout/footer.ejs'); %>

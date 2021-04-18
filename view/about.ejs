@@ -1,0 +1,49 @@
+<%- include('./layout/header.ejs'); %>
+      <!-- end header -->
+      
+      <div class="Marketing-bg">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="col-md-6 col-sm-6">
+               <h3>Бидний Зорилго</h3>
+               <p>Бид таны бүхийл амьлралын зухагийн тэмдэглэлийг энд бий болгохыг хүсэж байна</p>
+               <p>Зураг гэдэг нь таны бүхийл нандин хором мөч дурсамжийг илэрхийлэх баримт юм. </p>
+               <p>Таны амьлралын дурсамж өөрийн амьдралаа хэрхэн өнгөрөөсөн бүхийл нандин хором мөчүүд зураганд сийлэгдэн үлддэг гэж бид итгэдэг </p>
+          </div>
+
+          <div class="col-md-6 col-sm-6">
+               <img src="../images/blog2.png" class="img-responsive" alt="About Image">
+          </div>
+         </div>
+      </div>
+   </div>
+</div>
+      <!-- section --> 
+
+      <!-- end section -->
+
+       <!-- section --> 
+    
+         <div class="container">
+            <h3>Багын гишүүд</h3>
+            <div class="row">
+       
+               <% for(var i = 0; i< users.length; i++) { %>
+                  <div class="col-md-4 col-sm-4">
+                  
+                     <img src="../avatars/<%= users[i].profilePicture %>" class="img-responsive" height="200px" alt="Blog Image">
+                     <h3><%= users[i].username %></h3>
+                     
+                </div>
+              <% } %>
+               </div>
+            
+            
+     </div>
+
+      </div>
+      <!-- end section -->
+      
+      <!-- footer -->
+      <%- include('./layout/footer.ejs'); %>
